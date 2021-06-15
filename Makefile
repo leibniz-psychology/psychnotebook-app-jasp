@@ -9,5 +9,6 @@ install: startjasp org.psychnotebook.jasp.desktop
 	install -m 644 -D jasp.svg $(PREFIX)/share/icons/hicolor/scalable/apps/
 
 startjasp: startjasp.in
-	m4 -DXPRA_PREFIX=$(XPRA_PREFIX) -DJASP_PREFIX=$(JASP_PREFIX) < $< > $@
+	m4 -DXPRA_PREFIX=$(XPRA_PREFIX) -DXPRA_HTML5_PREFIX=$(XPRA_HTML5_PREFIX) \
+			-DJASP_PREFIX=$(JASP_PREFIX) < $< > $@
 

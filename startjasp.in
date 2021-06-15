@@ -9,7 +9,7 @@ done
 
 exec XPRA_PREFIX/bin/xpra start \
 		--bind="$SOCKET_PATH" \
-		--html=on \
+		--html=XPRA_HTML5_PREFIX/share/xpra/www \
 		--daemon=no \
 		--start='JASP_PREFIX/bin/jasp' \
 		--av-sync=no \
